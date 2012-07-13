@@ -9,6 +9,23 @@ on early-init
 	symlink /storage/sdcard0 /mnt/sdcard
 
 on post-fs-data
+    # JCROM theme
+    mkdir /data/theme 0775 system system
+    mkdir /data/theme/bootanime 0775 system system
+    mkdir /data/theme/frame 0775 system system
+    mkdir /data/theme/launcher 0775 system system
+    mkdir /data/theme/lockscreen 0775 system system
+    mkdir /data/theme/navikey 0775 system system
+    mkdir /data/theme/notification 0775 system system
+    mkdir /data/theme/wallpaper 0775 system system
+    mkdir /data/theme/screenshot 0775 system system
+    mkdir /data/theme/statusbar 0775 system system
+    mkdir /data/theme/navibar 0775 system system
+    mkdir /data/theme/simeji 0775 system system
+    mkdir /data/theme/sounds 0775 system system
+    mkdir /data/theme/sounds/effect 0775 system system
+    mkdir /data/theme/sounds/bootsound 0775 system system
+
 	# we will remap this as /storage/sdcard0 with the sdcard fuse tool
 	mkdir /data/media 0770 media_rw media_rw
 	chown media_rw media_rw /data/media
