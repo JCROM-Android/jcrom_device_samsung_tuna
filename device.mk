@@ -40,6 +40,10 @@ PRODUCT_PACKAGES := \
 	charger_res_images
 
 PRODUCT_PACKAGES += \
+	bootsound \
+	stagefright
+
+PRODUCT_PACKAGES += \
 	sensors.tuna \
 	libinvensense_mpl
 
