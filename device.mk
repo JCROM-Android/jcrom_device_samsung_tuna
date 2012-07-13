@@ -62,6 +62,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
 	tuna_hdcp_keys
 
+PRODUCT_PACKAGES += \
+	busybox
+
 #PRODUCT_PACKAGES += \
 #	keystore.tuna
 
