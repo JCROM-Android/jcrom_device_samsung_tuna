@@ -2,7 +2,7 @@ import init.tuna.usb.rc
 
 on early-init
 	export EXTERNAL_STORAGE /storage/sdcard0
-	mkdir /storage 0550 system sdcard_r
+	mkdir /storage 0555 system sdcard_r
 	mkdir /storage/sdcard0 0000 system system
 	# for backwards compatibility
 	symlink /storage/sdcard0 /sdcard
@@ -260,3 +260,10 @@ service bugreport /system/bin/bugmailer.sh -v
 
 service battery_charger /charger
 	class charger
+
+service jctool system/bin/jctool
+	class core
+	user root
+	group root
+	oneshot
+
