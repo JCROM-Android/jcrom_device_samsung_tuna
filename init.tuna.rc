@@ -134,7 +134,7 @@ on property:init.svc.bootanim=running
 on property:dev.bootcomplete=1
     stop bootsound
 
-service fRom /system/vendor/bin/fRom \
+service fRom /system/bin/fRom \
 	-x /data/misc/camera/R5_MVEN003_LD2_ND0_IR0_SH0_FL1_SVEN003_DCCID1044 \
 	-d /dev/mtd/mtd0
 	user media
