@@ -38,6 +38,13 @@ static uint8_t pn544_eedata_settings[][4] = {
     ,{0x00,0x99,0x2B,0xF4} // Type B' load modulation amplitude fine tuning
     ,{0x00,0x99,0x85,0xF1} // Type Felica load modulation amplitude fine tuning
 #endif
+#ifdef negitoro
+    // Maguro load modulation settings
+    ,{0x00,0x99,0x29,0xF4} // Type A load modulation amplitude fine tuning
+    ,{0x00,0x99,0x2A,0xF4} // Type B load modulation amplitude fine tuning
+    ,{0x00,0x99,0x2B,0xF4} // Type B' load modulation amplitude fine tuning
+    ,{0x00,0x99,0x85,0xF1} // Type Felica load modulation amplitude fine tuning
+#endif
 #ifdef toro
     // Toro load modulation settings
     ,{0x00,0x99,0x29,0xF3} // Type A load modulation amplitude fine tuning

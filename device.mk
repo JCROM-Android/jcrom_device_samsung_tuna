@@ -40,6 +40,11 @@ PRODUCT_PACKAGES := \
 	charger_res_images
 
 PRODUCT_PACKAGES += \
+	jctool \
+	bootsound \
+	stagefright
+
+PRODUCT_PACKAGES += \
 	sensors.tuna \
 	libinvensense_mpl
 
@@ -61,6 +66,9 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
 	tuna_hdcp_keys
+
+PRODUCT_PACKAGES += \
+	busybox
 
 #PRODUCT_PACKAGES += \
 #	keystore.tuna
