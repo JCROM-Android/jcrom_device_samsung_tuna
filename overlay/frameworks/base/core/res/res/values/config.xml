@@ -246,4 +246,10 @@
         <item>10</item>
     </integer-array>
 
+    <!-- Package name(s) containing location provider support -->
+    <string-array name="config_locationProviderPackageNames" translatable="false">
+        <item>com.android.location.fused</item>
+        <item>com.google.android.location</item>
+    </string-array>
+
 </resources>
