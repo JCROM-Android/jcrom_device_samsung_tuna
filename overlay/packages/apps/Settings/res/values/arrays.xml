@@ -26,6 +26,8 @@
         <item msgid="7001195990902244174">2 minutes</item>
         <item msgid="7489864775127957179">5 minutes</item>
         <item msgid="2314124409517439288">10 minutes</item>
+        <item>30 minutes</item>
+        <item>stay awake</item>
     </string-array>
 
     <!-- Do not translate. -->
@@ -42,5 +44,7 @@
         <item>300000</item>
         <!-- Do not translate. -->
         <item>600000</item>
+        <item>1800000</item>
+        <item>86400000</item>
     </string-array>
 </resources>
