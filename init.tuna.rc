@@ -21,26 +21,6 @@ on init
     symlink /mnt/usbdisk /usbdisk
 
 on post-fs-data
-    # JCROM theme
-    mkdir /data/theme 0775 system system
-    mkdir /data/theme/bootanime 0775 system system
-    mkdir /data/theme/frame 0775 system system
-    mkdir /data/theme/launcher 0775 system system
-    mkdir /data/theme/lockscreen 0775 system system
-    mkdir /data/theme/navikey 0775 system system
-    mkdir /data/theme/notification 0775 system system
-    mkdir /data/theme/wallpaper 0775 system system
-    mkdir /data/theme/screenshot 0775 system system
-    mkdir /data/theme/statusbar 0775 system system
-    mkdir /data/theme/navibar 0775 system system
-    mkdir /data/theme/simeji 0775 system system
-    mkdir /data/theme/atok 0775 system system
-    mkdir /data/theme/sounds 0775 system system
-    mkdir /data/theme/sounds/effect 0775 system system
-    mkdir /data/theme/sounds/bootsound 0775 system system
-    mkdir /data/theme/font 0775 system system
-    mkdir /data/theme/flickwnn 0775 system system
-
     mkdir /data/media 0770 media_rw media_rw
 
 	mkdir /data/misc/wifi 0770 wifi wifi
@@ -144,12 +124,6 @@ on property:persist.sys.tuna.off_mode=*
 on property:ril.modem.lte.powercontrol=*
 	write /sys/bus/usb/devices/1-1/power/control ${ril.modem.lte.powercontrol}
 
-on property:init.svc.bootanim=running
-    start bootsound
-
-on property:dev.bootcomplete=1
-    stop bootsound
-
 service fRom /system/bin/fRom \
 	-x /data/misc/camera/R5_MVEN003_LD2_ND0_IR0_SH0_FL1_SVEN003_DCCID1044 \
 	-d /dev/mtd/mtd0
@@ -163,13 +137,6 @@ service pvrsrvctl /vendor/bin/pvrsrvctl --start --no-module
 	user root
 	group root
 	oneshot
-
-service bootsound /system/bin/bootsound
-    class main
-    user media
-    group audio
-    disabled
-    oneshot
 
 # create filesystems if necessary
 service setup_fs /system/bin/setup_fs \
@@ -265,10 +232,4 @@ service bugreport /system/bin/bugmailer.sh -v
 
 service battery_charger /charger
 	class charger
-
-service jctool system/bin/jctool
-	class core
-	user root
-	group root
-	oneshot
 
