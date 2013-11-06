@@ -82,7 +82,7 @@ WIFI_DRIVER_FW_PATH_AP      := "/vendor/firmware/fw_bcmdhd_apsta.bin"
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
 
-BOARD_LIB_DUMPSTATE := libdumpstate.tuna
+BOARD_HAL_STATIC_LIBRARIES := libdumpstate.tuna
 
 BOARD_USES_SECURE_SERVICES := true
 
@@ -92,5 +92,7 @@ BOARD_SEPOLICY_DIRS := \
 BOARD_SEPOLICY_UNION := \
         genfs_contexts \
         file_contexts
+
+TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
 
 DISABLE_DEXPREOPT := true
